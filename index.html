@@ -1,24 +1,59 @@
 <!DOCTYPE HTML>
 <html ng-app="chatroom">
-  <head>
+
+<head>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Raleway:400,200,700" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
-  <body ng-controller="mainCtrl">
+</head>
+
+<body ng-controller="mainCtrl">
     <div class="main-container">
-      <h1> DevMountain Chat Room </h1>
-      <form ng-submit="postMessage(message)">
-        <input class="form-control text-box" type="text" ng-model="message" placeholder="Message">
-      </form>
-      <div class="messages-container">
-        <p ng-repeat="message in messages"> {{message.message}} </p>
-      </div>
+        <div class="card-header"></div>
+        <div class="card-info">
+            <div class="card-mug"></div>
+            <h1>DevMountain Chat Room</h1>
+            <h2>A simple parse powered not-so-private chat</h2>
+            <h3>By Austin Walker</h3>
+            <form ng-submit="postMessage(message)" role="form" class="ng-valid ng-dirty">
+                <div class="form-group">
+                    <input id="message-submit" class="form-control text-box ng-valid ng-dirty" type="text" ng-model="message" placeholder="Enter Message">
+                </div>
+            </form>
+            <div>
+                Filter: <input type='text' ng-model='filterText' class="form-control text-box" /> Sort:
+                <select ng-model='sortReverse' ng-options='createdAt for createdAt in sortUpDown' class="input-medium">
+                </select>
+
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">Messages from Goonies</div>
+                <div class="list-group" ng-repeat="message in messages |orderBy: '-createdAt' | filter: filterText track by $index"><span class="message1">{{message.cookie}} </span><span class="bold-text message2">{{message.message}}</span> <span class="message3">{{message.createdAt | date:'shortTime'}}</span>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <!-- <h1> DevMountain Chat Room </h1>
+        <form ng-submit="postMessage(message)">
+            <input class="form-control text-box" type="text" ng-model="message" placeholder="Message">
+        </form>
+        <div class="messages-container">
+            <p ng-repeat="message in messages">{{message.cookie}} {{message.message}} {{message.createdAt | date:'shortTime'}} </p>
+        </div> -->
     </div>
     <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.2.19.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
     <script src="js/app.js"></script>
     <script src="js/mainCtrl.js"></script>
     <script src="js/messageService.js"></script>
-  </body>
+</body>
+
 </html>

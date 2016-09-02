@@ -1,33 +1,157 @@
 html {
-  height: 100%;
-  width: 100%;
+    height: 100%;
+    width: 100%;
 }
 
 body {
-  height: 95%;
-  width: 100%;
-  font-family: sans-serif;
+    height: 95%;
+    width: 100%;
+    font-family: sans-serif;
+    background-image: url('https://hd.unsplash.com/photo-1471705301355-ec78367a7b07');
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .main-container {
-  width: 75%;
-  margin: 10px auto;
-  background: rgba(255, 255, 255, 0.86);
-  padding: 5px;
-  border-radius: 10px;
+    width: 75%;
+    margin: 10px auto;
+    background: rgba(255, 255, 255, 0.86);
+    padding: 5px;
+    border-radius: 10px;
 }
 
-.main-container h1 {
-  text-align: center;
+h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    color: #999;
 }
 
 .text-box {
-  margin: 0px auto;
-  width: 40%;
+    margin: 0px auto;
+    width: 40%;
 }
 
-p{
-  text-align: center;
-  margin: 3px 0;
-  font-size: 17px;
+p {
+    text-align: center;
+    margin: 3px 0;
+    font-size: 17px;
+}
+
+
+/* Div Container Styling by Jared Beauchamp */
+
+
+/* Starting the Card */
+
+.card {
+    /*position: absolute;
+  left: 50%;
+  top: 50%;*/
+    width: 75%;
+    /*height: 450px;
+  margin-left: -210px;
+  margin-top: -235px;*/
+    margin: 10px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, .5);
+}
+
+
+/* image at the top of the card */
+
+.card-header {
+    height: 200px;
+    background: #ccc;
+    margin: 20px -20px 0 -20px;
+    box-shadow: inset 0 -100px 100px -100px rgba(0, 0, 0, .5);
+    background: url(https://hd.unsplash.com/photo-1455995446964-ac64c23b70ba) no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+}
+
+
+/* mugshot in the middle of the card */
+
+.card-mug {
+    width: 150px;
+    height: 150px;
+    background: url(https://devmounta.in/img/badge.png) center no-repeat;
+    background-size: 50%;
+    background-color: white;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+    margin-top: -75px;
+    box-shadow: 0 -5px 10px -5px rgba(0, 0, 0, .5);
+    border-radius: 75px;
+}
+
+.card-links {
+    text-align: center;
+    font-size: 28px;
+    color: #999;
+}
+
+.card-links a {
+    color: #999;
+}
+
+.card-links a:hover {
+    color: #2980b9;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    margin: 5px 0;
+    font-family: Raleway, Helvetica Neue, Helvetica, Arial, Sans Serif;
+    color: #999;
+}
+
+h2 {
+    color: #999;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+h3 {
+    font-weight: 300;
+    color: #999;
+    letter-spacing: 2px;
+    font-size: 16px;
+    margin: 15px 0 10px 0;
+    text-transform: uppercase;
+}
+
+.fa {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.badge {
+    background-color: #3498db;
+}
+
+.panel {
+    width: 75%;
+    margin: 20px auto;
+}
+
+.list-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bold-text {
+    font-weight: bold;
 }
